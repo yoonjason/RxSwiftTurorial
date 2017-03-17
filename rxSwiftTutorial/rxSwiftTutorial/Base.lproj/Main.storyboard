@@ -34,15 +34,24 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcE-zE-j3q">
                                 <rect key="frame" x="16" y="156" width="343" height="29"/>
-                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.70903747480847112" green="0.83514537401969724" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="2yo-DS-LSX"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="다른 페이지 이동">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="onButtonBeYourManAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEJ-fp-Kgc"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OYp-lm-Yd1">
+                                <rect key="frame" x="16" y="269" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -58,12 +67,13 @@
                     <connections>
                         <outlet property="onButtonReload" destination="JQm-Jg-so8" id="4qE-rL-Qyg"/>
                         <outlet property="onButtonbBeyourman" destination="GcE-zE-j3q" id="dDV-sr-C0f"/>
+                        <outlet property="onTextId" destination="OYp-lm-Yd1" id="ZVc-fd-Sby"/>
                         <segue destination="YIr-jW-I2Y" kind="push" identifier="TO_PUSH1" id="J5H-dl-guj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="123"/>
+            <point key="canvasLocation" x="992.79999999999995" y="122.78860569715144"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="nEx-oH-gbx">
