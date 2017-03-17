@@ -86,13 +86,49 @@
                     <view key="view" contentMode="scaleToFill" id="Hla-xY-vns">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NQ-sy-hh0">
+                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbg-gp-ieq">
+                                <rect key="frame" x="16" y="153" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호체크합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUh-eY-GNu">
+                                <rect key="frame" x="16" y="205" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4NQ-sy-hh0" firstAttribute="top" secondItem="iZw-Mz-OIk" secondAttribute="bottom" constant="36" id="8rc-pz-jEO"/>
+                            <constraint firstItem="cbg-gp-ieq" firstAttribute="leading" secondItem="Hla-xY-vns" secondAttribute="leading" constant="16" id="C7b-Lc-Vrl"/>
+                            <constraint firstAttribute="trailing" secondItem="JUh-eY-GNu" secondAttribute="trailing" constant="16" id="ESn-yI-GOD"/>
+                            <constraint firstAttribute="trailing" secondItem="cbg-gp-ieq" secondAttribute="trailing" constant="16" id="IRT-8r-Y8Q"/>
+                            <constraint firstItem="JUh-eY-GNu" firstAttribute="leading" secondItem="Hla-xY-vns" secondAttribute="leading" constant="16" id="Q5K-EG-KU2"/>
+                            <constraint firstAttribute="trailing" secondItem="4NQ-sy-hh0" secondAttribute="trailing" constant="16" id="R5C-N6-7LD"/>
+                            <constraint firstItem="cbg-gp-ieq" firstAttribute="top" secondItem="4NQ-sy-hh0" secondAttribute="bottom" constant="23" id="VVO-hr-izi"/>
+                            <constraint firstItem="4NQ-sy-hh0" firstAttribute="leading" secondItem="Hla-xY-vns" secondAttribute="leading" constant="16" id="vbe-2h-YIU"/>
+                            <constraint firstItem="JUh-eY-GNu" firstAttribute="top" secondItem="cbg-gp-ieq" secondAttribute="bottom" constant="22" id="yfy-9X-Ofr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e5g-5J-AnD"/>
+                    <connections>
+                        <outlet property="checkLabel" destination="JUh-eY-GNu" id="x50-0l-3A1"/>
+                        <outlet property="onTextPassWord" destination="4NQ-sy-hh0" id="Jk4-Uq-75D"/>
+                        <outlet property="onTextRePassword" destination="cbg-gp-ieq" id="nof-DI-3Ow"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKx-8y-LH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697" y="123"/>
+            <point key="canvasLocation" x="1696.8" y="122.78860569715144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l1t-rx-aFO">

@@ -13,7 +13,7 @@ import RxCocoa
 class ViewController: UIViewController {
 
     let disposeBag = DisposeBag()
-    var i = 0
+    var i = ""
     
     
     @IBOutlet weak var onTextId: UITextField!
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBAction func onButtonAction(_ sender: Any) {
         setup()
-        inputTextCheck()
+        
     }
     
     @IBAction func onButtonBeYourManAction(_ sender: Any) {
@@ -31,13 +31,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        beYourMan() 
+        beYourMan()
+        inputTextCheck()
     }
 
     func inputTextCheck() {
+        
+        
         onTextId.rx.text.subscribe{
-            getText in print(getText)
+             print($0)
         }.addDisposableTo(disposeBag)
+        
     }
     
     func setup() {

@@ -13,9 +13,16 @@ import RxCocoa
 
 class SecondViewController: UIViewController {
 
+    
+    @IBOutlet weak var checkLabel: UILabel!
+    @IBOutlet weak var onTextPassWord: UITextField!
+    @IBOutlet weak var onTextRePassword: UITextField!
+    
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        passwordCompareCheck()
         // Do any additional setup after loading the view.
     }
 
@@ -25,14 +32,24 @@ class SecondViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func passwordCompareCheck() {
+//        onTextPassWord.rx.text.subscribe{
+//            print($0)
+//        }.addDisposableTo(disposeBag)
+//        
+//        onTextRePassword.rx.text.subscribe{
+//            print($0)
+//            }.addDisposableTo(disposeBag)
+        let passEmptyCheck = onTextPassWord.rx.text.asObservable().map{
+            $0?.isEmpty
+        }
+        let passReEmptyCheck = onTextRePassword.rx.text.asObservable().map{
+            $0?.isEmpty
+        }
+        
+        
+        print(passEmptyCheck)
+        print(passReEmptyCheck)
     }
-    */
 
 }
